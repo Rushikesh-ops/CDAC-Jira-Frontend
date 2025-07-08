@@ -1,4 +1,5 @@
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = "https://cdac-jira-backend-production.up.railway.app";
+
 
 export const API_PATHS = {
   AUTH: {
