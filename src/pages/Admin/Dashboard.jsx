@@ -127,7 +127,7 @@ const Dashboard = () => {
           />
 
           <InfoCard
-            label="Pending Tasks"
+            label="Completed Tasks"
             value={addThousandsSeparator(
               dashboardData?.charts?.taskDistribution?.Completed || 0
             )}
