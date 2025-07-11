@@ -14,6 +14,7 @@ const SignUp = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmPassword] = useState("");
   const [adminInviteToken, setAdminInviteToken] = useState("");
  const [error , setError] = useState(null);
 
@@ -41,6 +42,13 @@ const SignUp = () => {
         setError("Please enter the password.")
         return;
       }
+
+      if (password !== confirmpassword) {
+        setError("Passwords don't match.")
+        return;
+      }
+
+
       
       if (!profilePic) {
         setError("Please upload a profile photo.")
@@ -124,6 +132,14 @@ const SignUp = () => {
                 value={password}
                 onChange={({target}) => setPassword(target.value)}
                 label="Password"
+                placeholder="Min 8 Characters"
+                type="password"
+            />
+
+            <Input 
+                value={confirmpassword}
+                onChange={({target}) => setConfirmPassword(target.value)}
+                label="Confirm Password"
                 placeholder="Min 8 Characters"
                 type="password"
             />
